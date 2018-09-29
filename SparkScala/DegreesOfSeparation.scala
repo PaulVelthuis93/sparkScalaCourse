@@ -1,4 +1,4 @@
-package com.sundogsoftware.spark
+//package SparkScala
 
 import org.apache.spark._
 import org.apache.spark.SparkContext._
@@ -55,7 +55,7 @@ object DegreesOfSeparation {
   
   /** Create "iteration 0" of our RDD of BFSNodes */
   def createStartingRdd(sc:SparkContext): RDD[BFSNode] = {
-    val inputFile = sc.textFile("../marvel-graph.txt")
+    val inputFile = sc.textFile("Marvel-graph.txt")
     return inputFile.map(convertToBFS)
   }
   
